@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  overflow-x: hidden;
+}
+
+ul .list-item i {
+  margin-top: 0.4rem;
+}
+
+form input {
+  background-color: var(--bs-secondary) !important;
+}
+
+.card:hover {
+  transform: scale(1.015);
+}
+
+.decoration {
+  width: 30px;
+  height: 70vh;
+  transform: translateY(-50%);
+
+  svg {
+    height: 100%;
+  }
+}
+
+.section-title {
+  font-weight: bold;
+  background-color: var(--bs-primary);
+  display: block;
+  margin: 0 auto 3rem;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+}
+
+#solutions,
+#details,
+#details-2,
+#expertise,
+#pricing,
+#projects,
+#subscribe {
+  overflow: initial;
+  scroll-margin-top: 120px;
+}
+
+// ------------------------------
+#header {
+  height: 100dvh;
+
+  .background-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      img {
+        object-position: 80%;
+      }
+    }
+  }
+
+  .navbar {
+    border-bottom: 1px solid #4a4747;
+
+    &.fixed-top {
+      transition: all 1000ms ease-in-out;
+    }
+
+    .navbar-brand:hover,
+    .nav-link:hover,
+    .socials .fa-stack:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .text-container {
+    .btn {
+      width: fit-content;
+    }
+  }
+}
+
+#partners {
+  .partner-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+}
+
+#info {
+  p.fs-xl-4 {
+    font-size: 1.15rem;
+  }
+}
+
+#solutions {
+  .card-body {
+    font-size: 1.15rem;
+  }
+}
+
+#expertise {
+  .point-control .icon-control {
+    min-width: 33.33% !important;
+
+    i:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+}
+
+#video {
+  .fa-stack {
+    position: relative;
+    font-size: 2rem;
+
+    i.fa-play::before {
+      position: absolute;
+      transform: translateX(-40%);
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 10%;
+      width: 80%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: var(--bs-primary);
+      z-index: -1;
+      animation: pulse 1.5s ease infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        scale: 1;
+        opacity: 1;
+      }
+      100% {
+        scale: 1.6;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+#video {
+  .modal-dialog {
+    max-width: 1000px !important;
+  }
+}
+
+//------------------------
+
+#pricing {
+  .shopping-card {
+    cursor: pointer;
+    text-decoration: none;
+    max-width: 395px;
+    height: 100%;
+  }
+}
+
+#projects {
+  .project-control {
+    cursor: pointer;
+  }
+}
+
+#footer {
+  .social-icons {
+    i {
+      color: var(--bs-body-color) !important;
+      &:hover {
+        transform: scale(1.025);
+        color: var(--bs-primary) !important;
+      }
+    }
+  }
+}
+
+// Sticky Scroll to top Button
+a.fixed-bottom {
+  width: fit-content !important;
+  left: auto;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem 0.6rem;
+  background-color: #fff;
+  scale: 1.2;
+  transition: opacity 300ms ease-in-out;
+
+  &.show {
+    opacity: 1 !important;
+  }
+
+  &:hover {
+    scale: 1.3;
+  }
+}
+
+#inner-page {
+  #about {
+    .cards-container {
+      max-width: 1100px !important;
+    }
+
+    .card-control {
+      .card-body {
+        width: fit-content !important;
+        font-size: 1rem;
+
+        h6 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  #privacy {
+    .container {
+      max-width: 1180px !important;
+
+      .list-group-item {
+        margin-bottom: 0 !important;
+
+        p {
+          font-size: 1rem !important;
+          font-weight: 300 !important;
+        }
+
+        ul .ToS.list-group-item:before {
+          content: '●';
+          margin-right: 0.75rem;
+        }
+
+        @media (max-width: 992px) {
+          padding-left: .5rem;
+          padding-right: .5rem;
+        }
+      }
+    }
+  }
+}
+
+//  Media Queries ----------------
+@media (min-width: 500px) and (max-width: 575px) {
+  .projects-container > div {
+    flex-basis: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  #header .text-container {
+    font-size: 1rem;
+  }
+
+  #subscribe {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 664px) {
+  #projects .modal-dialog {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 880px) {
+  #projects .modal-dialog {
+    min-width: 90%;
+    max-width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  #projects .modal-dialog {
+    min-width: 1070px;
+    max-width: 1070px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  #header {
+    height: fit-content;
+
+    .row .col-mlg-6 {
+      flex-basis: 100%;
+      margin-left: 0;
+      height: fit-content;
+    }
+    .text-container {
+      text-align: center !important;
+      width: 75%;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+
+      .display-4 {
+        font-size: 2.5rem !important;
+      }
+      p.lead {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+      }
+      .btn {
+        align-self: center !important;
+      }
+    }
+  }
+
+  %landscape-shared {
+    .col-mlg-6 {
+      flex-basis: 50% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding: 0 1rem !important;
+
+      .text-container {
+        h2,
+        h3,
+        p {
+          width: 100% !important;
+          text-align: left !important;
+        }
+        hr {
+          margin-right: auto !important;
+        }
+
+        ul li {
+          width: 100% !important;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  #info {
+    @extend %landscape-shared;
+    form {
+      margin-top: 4.5rem !important;
+    }
+  }
+
+  %landscape-details {
+    .row {
+      flex-direction: row !important;
+      padding: 0 1rem !important;
+
+      .col-mlg-6 {
+        width: 50% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        .text-container {
+          font-size: 1rem;
+
+          p.lead {
+            font-size: 1rem;
+          }
+        }
+        .image-container {
+          margin-top: 7.5rem !important;
+        }
+      }
+    }
+
+    .decoration {
+      display: none !important;
+    }
+  }
+
+  #details {
+    @extend %landscape-shared;
+    @extend %landscape-details;
+  }
+
+  #details-2 {
+    @extend %landscape-shared;
+    @extend %landscape-details;
+
+    .row {
+      flex-direction: row-reverse !important;
+
+      .col-mlg-6 {
+        .text-container {
+          h2 {
+            margin-left: -4rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  #expertise {
+    .row .col-11 {
+      width: 50% !important;
+
+      .point-control {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        gap: 1.5rem !important;
+
+        .icon-control {
+          align-self: center !important;
+        }
+
+        .text-content {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
+  #pricing {
+    .row .col-control {
+      width: 50%;
+    }
+  }
+
+  #video {
+    .embed-responsive-item {
+      max-height: 90vh !important;
+    }
+
+    .ratio,
+    .modal-body,
+    .modal-dialog,
+    .modal {
+      margin-top: 0;
+      padding-top: 0;
+      height: fit-content !important;
+    }
+  }
+
+  #projects .modal-dialog {
+    max-width: 90%;
+    margin-top: 1rem !important;
+
+    .modal-body .col-mlg-6 {
+      width: 50% !important;
+      margin-top: 0;
+      font-size: 1rem !important;
+
+      img {
+        margin-top: 3.5rem;
+      }
+
+      .text-container {
+        text-align: left !important;
+      }
+
+      .buttons {
+        justify-content: flex-start !important;
+        gap: 0.75rem !important;
+
+        .btn {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  #subscribe {
+    .col-md-10 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

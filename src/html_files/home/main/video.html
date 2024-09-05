@@ -1,0 +1,102 @@
+<div class="container-lg py-6">
+  <div class="row g-5">
+    <div class="col-12">
+      <div class="video-container position-relative">
+        <img
+          src="../../../assets/images/others/video-preview.jpg"
+          alt="video preview image"
+          class="img-fluid d-block mx-auto"
+        />
+
+        <span
+          class="video-btn fa-stack position-absolute top-50 start-50 translate-middle"
+          style="vertical-align: middle"
+          data-bs-toggle="modal"
+          data-bs-target="#videoModal"
+        >
+          <i class="fa-regular fa-circle fa-stack-2x text-primary"></i>
+          <i class="fa-solid fa-play fa-stack-1x text-white"></i>
+        </span>
+      </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div
+      class="modal fade px-0 p-sm-2 px-mlg-4"
+      id="videoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="videoModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-secondary">
+          <div class="modal-header border-0 pb-0 pt-2 pe-2">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body rounded-top rounded-2 px-0 pb-0">
+            <div class="ratio ratio-16x9">
+              <div
+                id="player"
+                class="embed-responsive-item"
+                allowfullscreen
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Points ----------------- -->
+    <div
+      class="col-10 offset-1 col-sm-8 offset-sm-2 col-mmd-6 offset-mmd-0 col-mlg-4"
+    >
+      <div
+        class="text-container d-flex gap-2 flex-column text-center text-mmd-start"
+      >
+        <h3 class="fw-bold text-capitalize">10 Years Of Experience</h3>
+        <p>
+          With over 10 years of experience, we have gained valuable insights and
+          expertise to deliver high-quality software solutions
+        </p>
+      </div>
+    </div>
+
+    <hr class="w-20 mx-auto d-mmd-none" />
+
+    <div
+      class="col-10 offset-1 col-sm-8 offset-sm-2 col-mmd-6 offset-mmd-0 col-mlg-4"
+    >
+      <div
+        class="text-container d-flex gap-2 flex-column text-center text-mmd-start"
+      >
+        <h3 class="fw-bold text-capitalize">Enduring Partnerships</h3>
+        <p>
+          We believe in building enduring partnerships with our clients. We
+          establish long-term relationships based on trust
+        </p>
+      </div>
+    </div>
+
+    <hr class="w-20 mx-auto d-mmd-none" />
+
+    <div
+      class="col-10 offset-1 col-sm-8 offset-sm-2 col-mmd-6 offset-mmd-0 col-mlg-4"
+    >
+      <div
+        class="text-container d-flex gap-2 flex-column text-center text-mmd-start"
+      >
+        <h3 class="fw-bold text-capitalize">Skilled Capable Team</h3>
+        <p>
+          Our team consists of skilled and capable professionals who are
+          passionate about delivering excellence
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
