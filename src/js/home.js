@@ -39,7 +39,7 @@ class Storage {
   };
 
   static getCurrentPage = () => {
-    localStorage.getItem('current-page');
+    return localStorage.getItem('current-page');
   };
 }
 
